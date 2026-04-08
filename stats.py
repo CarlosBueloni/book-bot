@@ -9,6 +9,17 @@ def count_characters(text):
             chars[char.lower()] += 1
         else:
             chars[char.lower()] = 1
-
     return chars
+
+def sort_characters(dict):
+    lst = []
+    for key, value in dict.items():
+        lst.append({"char": key, "num": value})
+    lst.sort(key=get_num, reverse=True)
+    return lst
+
+
+def get_num(dict):
+    return dict["num"]
+
 
